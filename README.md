@@ -32,6 +32,11 @@ https://www.quora.com/Is-there-any-open-source-web-scraping-tool-such-as-Scrapin
 http://roninio.blogspot.com/
 24) http://markantoniou.blogspot.com/2008/06/notepad-how-to-use-regular-expressions.html
 25) https://docs.mongodb.org/ecosystem/drivers/csharp/
+26) http://selenium-python.readthedocs.org/api.html
+27) http://neo4j.com/developer/graph-db-vs-rdbms/
+28) https://www.iplocation.net/
+29) http://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautiful-web-maps
+30) https://docs.vagrantup.com/v2/why-vagrant/index.html
 #Key words
 1) Skype Develop SDK
 2) Relationship content algorithm
@@ -42,4 +47,7 @@ http://roninio.blogspot.com/
 7) python Robot get data online from website
 8) web scraping with python open source c#
 9) predictionio nosql
-10) 
+10) graph database
+11) iplocation
+12) d3js map
+13) vagrant
