@@ -1,0 +1,84 @@
+---current branch: develop-------
++ get new code
+
+git pull
+git fetch --tags "origin"
+git submodule update --init --recursive
+git fat pull
+
++create new branch:
+
+if {branch_name} is existed and I want override:
+     git checkout -f -B {branch_name}
+else
+{
+     git checkout -B {branch_name}
+}
+
++ switch branch
+git checkout {branch_name}
+
++ rebase(: never leave the change is uncommited)
+git rebase develop
+
+if (has conflict)
+    if (resolve by rua == true)
+   {
+    back to terminal
+         git rebase --continue
+    }
+    else
+    {
+        git rebase --abort
+        go back rebase step 
+    }
+    verify your change
+
+ok = cd build/cmake .. -G "Visual Studio 12"
+run/ build == successfull
+
+address DAVID'S comments
+
++ case study: split out 1 into 2
+git reset --soft HEAD^
+backup files changed
+git reset --hard HEAD
+move code from backup files to 2 commits
+
+git commit -am "CHAT-...: dddd "
+
+git push -f origin {branch_name}
+
++ case study: merging 2 commit into 1
+
+git rebase -i
+vim:
+dd: cut
+p: paste
+
+(DInh vui coi lai)
+vim: !wq
+git rebase --continues
+
+
+----current branch != develop----
++create new branch:
+
+if {branch_name} is existed and I want override:
+     git checkout -f -B {branch_name} origin/{remote_branch_name}
+else
+{
+     git checkout -B {branch_name} origin/{remote_branch_name}
+}
+
++ pick a commit {local/remote}
+git cherry-pick {commit_id}
+
++ reset to unstate/uncommited
+the first commit: git reset --soft HEAD^
+n first commit: git reset --soft HEAD~n
+
++ reset to delete/remove commit
+the first commit: git reset --hard HEAD^
+n first commit: git reset --hard HEAD~n 
+
